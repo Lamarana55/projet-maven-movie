@@ -9,12 +9,17 @@ public class MovieRepository {
 
     List<Movie> movies = new ArrayList<>();
 
-    public void save(Movie movie){
+    public void save(Movie movie) {
         movies.add(movie);
         System.out.println("The movie " + movie.getTitle() + " has been added...!!!");
     }
 
-    public void saveAll(List<Movie> movies){
+    public void saveAll(List<Movie> list) {
+        movies.addAll(list);
+        System.out.println("The movies has been added...!!!");
+    }
 
+    public List<Movie> getAll() {
+        return movies;
     }
 }
